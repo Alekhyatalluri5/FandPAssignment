@@ -1,0 +1,108 @@
+@import '~antd/lib/style/themes/default.less';
+
+// .content {
+//   margin: 24px 24px 0;
+// }
+// .pagehead{
+//   margin: 0px;
+//  }
+
+// @media screen and (max-width: @screen-sm) {
+//   .content {
+//     margin: 24px 0 0;
+//   }
+// }
+:global {
+  .ant-layout-header {
+    line-height: 0px !important;
+  }
+
+  .ant-menu-dark .ant-menu-sub  {
+    background-color:  green;
+  }
+}
+// layout header 
+.basicLayoutHeader {
+  width: 100vw;
+  height:9vh ;
+  background-color: green;
+  padding-top: 5px;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  // line-height: 100px;
+
+}
+// Layout content
+.basicLayoutContent {
+  width: 100vw;
+  height: 93vh;
+  background-color: #f1f4f600 !important;
+  overflow-x: hidden;
+}
+// Layout footer
+.basicLayoutFooter {
+  width: 100vw;
+  height: 5vh;
+  background-color: #F9FAFB;
+  padding: 0;
+  position: fixed;
+  bottom: 0;
+}
+// layout logo
+.logoLink{
+  padding: 5px 125px 0px 0px;
+}
+// more options in header
+.menuIconsDiv {
+  display: flex;
+  padding: 5px;
+}
+.bellImageDiv {
+  padding: 5px 100px 0 90px;
+}
+
+.userImageDiv {
+  padding: 2px 0 0 0;
+}
+.name{  
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+}
+.role{
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+}
+// @media screen and (max-width: @screen-sm) {
+  @media (max-width: 600px) {
+  .logoLink{
+    padding: 14px 0px;
+    width: 97px;
+    margin: 0px 7px 0px -41px;
+  }
+  // .bellImageDiv {
+  //   padding: 0px;
+  // }
+  // .userImageDiv {
+  //   padding: 0px;
+  // }
+  // .calenderImageDiv {
+  //   padding: 0px;
+  // }
+}
+
+// .layoutContentDiv {
+//     height: 70vh;
+//     max-height: 65vh;
+//     // overflow-X: hidden;
+//     // overflow-Y: hidden;
+//     padding: 20px 50px;
+// }
