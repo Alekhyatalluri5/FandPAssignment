@@ -33,20 +33,27 @@ class Home extends React.Component {
         favouriteItems: this.state.favouriteItems
       }
     })
+    const abc = localStorage.getItem('selectedState');
+    if(!!abc) {
+      let res = abc.split(",");
+      this.setState({
+        favouriteItems: res
+      })   
+    }                                 
   }
   handleClick = (postId) => {
     if (this.state.favouriteItems.indexOf(postId) == -1) {
-      this.setState({ favouriteItems: [...this.state.favouriteItems, postId] });
-      this.props.dispatch({
-        type: 'cakes/actionSample',
-        payload: {
-          favouriteItems: [...this.state.favouriteItems, postId]
-        }
+      this.setState({ favouriteItems: [...this.state.favouriteItems, postId] },() => {
+          localStorage.setItem( 'selectedState', [this.state.favouriteItems] );
       })
     } else {
       const array1 = this.state.favouriteItems.filter((id) => id != postId);
-      this.setState({ favouriteItems: array1 });
-    }
+      this.setState({ favouriteItems: array1 }, () => {
+       
+          localStorage.setItem( 'selectedState',  [this.state.favouriteItems]); 
+    
+  })
+}
   };
 
   render() {
